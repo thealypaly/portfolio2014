@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="demo-1 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Allison Bennett | Strategic Creative</title>
+		<meta name="Allison Bennett Graphic/Web Designer, Front-End Development" content="Hover Effects with animated SVG Shapes using Snap.svg" />
+		<meta name="keywords" content="Graphic design, Lincoln, Nebraska, web design, front-end development, art, graphics" />
+		<meta name="author" content="Allison Bennett" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component2.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="css/demo5.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/snap.svg-min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+	
+			<header class="home-header">
+				<h1>ALLISON BENNETT</h1>
+				<span class="current-demo-gray">STRATEGIC DESIGNER.<br />MAKE IT PRETTY. MAKE IT SMART.</span>
+				<nav class="codrops-demos">
+					<a href="index.html">&#8592; BACK TO WORK</a>
+				</nav>
+			</header>
+			<section id="grid" class="grid clearfix">
+				<img src="img/tshirts/tshirts-1.jpg" width="100%" alt="Tshirts">
+			</section>
+			<section id="grid" class="grid clearfix">
+				<div class="introLinkBox">
+					<div class="intro">
+Tshirt designs for various clients and personal projects. My favorite type of design work.</div>	
+
+			</div>
+				<div class="details">
+<strong>EXPERIENCE GAINED |||</strong> Knowledge of proper vector file preparation specifically for tshirts.  <strong>|||</strong> Strengthened illustration and concepting skills.
+					<!--	<br /><br />Visit the website<a href="http://ncta.unl.edu/" target="_blank">here</a>.-->
+				</div>
+			</section>
+		
+						<section id="grid" class="grid clearfix">
+				<img src="img/tshirts/tshirts-2.jpg" width="100%" alt="Tshirts">
+				<img src="img/tshirts/tshirts-3.jpg" width="100%" alt="Tshirts">
+				<img src="img/tshirts/tshirts-4.jpg" width="100%" alt="Tshirts">			
+			</section>
+
+			
+
+
+
+				<nav class="codrops-demos" style="margin: 0 auto; text-align:center;">
+					<a href="index.html">&#8592; BACK TO WORK</a>
+				</nav>
+		</div><!-- /container -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script type="text/javascript">
+			var Page = (function() {
+
+				var $grid = $( '#bb-custom-grid' );
+
+				return {
+					init : function() {
+						$grid.find( 'div.bb-bookblock' ).each( function( i ) {
+							
+							var $bookBlock = $( this ),
+								$nav = $bookBlock.next().children( 'span' ),
+								bb = $bookBlock.bookblock( {
+									speed : 600,
+									shadows : false
+								} );
+								
+							// add navigation events
+							$nav.each( function( i ) {
+								$( this ).on( 'click touchstart', function( event ) {
+									var $dot = $( this );
+									$nav.removeClass( 'bb-current' );
+									$dot.addClass( 'bb-current' );
+									$bookBlock.bookblock( 'jump', i + 1 );
+									return false;
+								} );
+							} );
+							
+							// add swipe events
+							$bookBlock.children().on( {
+								'swipeleft' : function( event ) {
+									$bookBlock.bookblock( 'next' );
+									return false;
+								},
+								'swiperight' : function( event ) {
+									$bookBlock.bookblock( 'prev' );
+									return false;
+								}
+
+							} );
+							
+						} );
+					}
+				};
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+
+
+		<script>
+			(function() {
+	
+				function init() {
+					var speed = 250,
+						easing = mina.easeinout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+		</script>
+	</body>
+</html>
