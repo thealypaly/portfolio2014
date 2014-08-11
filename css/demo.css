@@ -130,6 +130,63 @@ a:hover, a:focus {
 	color:#3b3b3b;
 }
 
+
+
+
+.codrops-demos-left {
+	padding-top: 1em;
+	font-size: 0.8em;
+	float:left;
+}
+
+.codrops-demos-left a {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	outline: none;
+	border: 2px solid #fff;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.codrops-demos-left a:hover,
+.codrops-demos-left a.current-demo,
+.codrops-demos-left a.current-demo:hover {
+	border-color: #3b3b3b;
+	color:#3b3b3b;
+}
+
+
+.codrops-demos-right {
+	padding-top: 1em;
+	font-size: 0.8em;
+	float:right;
+}
+
+.codrops-demos-right a {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	outline: none;
+	border: 2px solid #fff;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.codrops-demos-right a:hover,
+.codrops-demos-right a.current-demo,
+.codrops-demos-right a.current-demo:hover {
+	border-color: #3b3b3b;
+	color:#3b3b3b;
+}
+
+
 .current-demo-gray {
     color: #4c4c4c;
 }
@@ -144,5 +201,19 @@ a:hover, a:focus {
 	.codrops-icon span {
 		display: none;
 	}
+
+.codrops-demos-left {
+	padding-top: 1em;
+	font-size: 0.5em;
+	float:none;
+	text-align: center;
+}
+
+.codrops-demos-right {
+	padding-top: 1em;
+	font-size: 0.5em;
+	float:none;
+	text-align: center;
+}
 
 }

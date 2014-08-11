@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="demo-1 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Allison Bennett | Strategic Creative</title>
+		<meta name="Allison Bennett Graphic/Web Designer, Front-End Development" content="Hover Effects with animated SVG Shapes using Snap.svg" />
+		<meta name="keywords" content="Graphic design, Lincoln, Nebraska, web design, front-end development, art, graphics" />
+		<meta name="author" content="Allison Bennett" />
+		<link rel="shortcut icon" href="favicon.ico">
+				<link rel="stylesheet" type="text/css" href="css/component2.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script src="js/snap.svg-min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+				<script>
+
+						function calcHeight()
+				{
+				    var the_height=0;
+				    //find the height of the internal page
+				    if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+				        the_height=document.getElementById('example').contentDocument.body.offsetHeight+40;
+				    }
+				    else
+				    {
+				        the_height=document.getElementById('example').contentWindow.document.body.scrollHeight+16;
+				    }
+				document.getElementById('example').height=the_height+"px";
+				}
+				</script>
+
+	</head>
+	<body>
+		<div class="container">
+	
+			<header class="home-header">
+				<h1>ALLISON BENNETT</h1>
+				<span class="current-demo-gray">STRATEGIC DESIGNER.<br />MAKE IT PRETTY. MAKE IT SMART.</span>
+				<nav class="codrops-demos">
+					<a href="index.html">Work</a>
+					<a class="current-demo" href="everyday.html">Everyday</a>
+					<a href="about.html">About</a>
+				</nav>
+			</header>
+			<div class="current-demo-gray" style="text-align:center; font-weight:lighter;">
+					Things from everyday life. May be stuff I'm working on, cool stuff I see, or just whatever I'm up to. </div>
+				<div style="margin:0px;padding:0px;overflow:hidden">
+<iframe src="http://thealypaly.tumblr.com/" style="overflow:hidden;height:4250px;width:100%" height="4250px" width="100%" frameborder="0"></iframe> 
+</div>
+			<nav class="codrops-demos" style="margin: 0 auto; text-align:center; position: relative;">
+					<a href="index.html">&#8592; BACK TO WORK</a>
+				</nav>
+			
+		</div><!-- /container -->
+		<script>
+			(function() {
+	
+				function init() {
+					var speed = 250,
+						easing = mina.easeinout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+		</script>
+	</body>
+</html>
