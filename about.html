@@ -19,7 +19,7 @@
 		<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script type="text/javascript">
 	$(document).ready(function() {
-		$(".fancybox").fancybox();
+		
 	});
 </script>
 
@@ -87,6 +87,8 @@ I currently work full-time as a multimedia design specialist for University of N
 							path.animate( { 'path' : pathConfig.from }, speed, easing );
 						} );
 					} );
+
+					$(".fancybox").fancybox({height: "50%"});
 				}
 
 				init();
