@@ -14,18 +14,30 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<script src="js/snap.svg-min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<!-- Add jQuery library -->
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+			<!-- Add fancyBox main JS and CSS files -->
+		<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 		<script type="text/javascript">
-	$(document).ready(function() {
-		
-	});
-</script>
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
 
-		<!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+			$('.fancybox').fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: '70%',
+				height		: '70%',
+				autoSize	: false,
+				closeClick	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+			});
+		});
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -45,9 +57,8 @@
 I am a multidisciplinary visual designer with experience in strategic print + digital work.<br />
 				<nav class="codrops-demos">
 					<a href="img/Allison_Bennett_Resume_June2014.pdf" target="_blank">Resume PDF</a>
-					<a class="fancybox fancybox.iframe" href="ataglance.html">AT A GLANCE</a>
-
-				</nav>
+					<a class="fancybox fancybox.iframe" href="ataglance.html">ME AT A GLANCE</a>
+	</nav>
 				<span style="font-size:.7em; font-family: 'Lato', Arial, sans-serif; font-weight:lighter; color:#3b3b3b; line-height:1.8;">Reach me at <a href="allison.bennett.creative@gmail.com">allison.bennett.creative@gmail.com</a></span>
 				<img src="img/flying.gif" width="375px" alt="Goofy Crane">
 </div>	
@@ -56,6 +67,8 @@ I am a multidisciplinary visual designer with experience in strategic print + di
 					Hi! I'm Allison, and I love great design and big ideas. With degrees in art and advertising, I know the importance of great design as well as a great strategy behind it to achieve my clients' goals.<br /><br />
 
 I currently work full-time as a multimedia design specialist for University of Nebraska–Lincoln <a href="http://www.edmedia.unl.edu" target="_blank">EdMedia</a>. Day-to-day work at EdMedia is a similar feel to working at a fast-paced digital/ad agency, where we serve clients within <a href="http://www.unl.edu/" target="_blank">UNL</a>, <a href="http://ianr.unl.edu/" target="_blank">IANR</a>, and other various clients outside of the University. <br /><br /> I also enjoy working on freelance and personal side projects. I'd love to help with your design needs – drop me an email at <a href="allison.bennett.creative@gmail.com">allison.bennett.creative@gmail.com</a> and we'll chat!</div>
+
+
 			</section>
 			<section id="grid" class="grid clearfix">
 				<img src="img/about.jpg" width="100%" alt="About Allison">
@@ -65,35 +78,5 @@ I currently work full-time as a multimedia design specialist for University of N
 				</nav>
 			
 		</div><!-- /container -->
-		<script>
-			(function() {
-	
-				function init() {
-					var speed = 250,
-						easing = mina.easeinout;
-
-					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
-						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
-							pathConfig = {
-								from : path.attr( 'd' ),
-								to : el.getAttribute( 'data-path-hover' )
-							};
-
-						el.addEventListener( 'mouseenter', function() {
-							path.animate( { 'path' : pathConfig.to }, speed, easing );
-						} );
-
-						el.addEventListener( 'mouseleave', function() {
-							path.animate( { 'path' : pathConfig.from }, speed, easing );
-						} );
-					} );
-
-					$(".fancybox").fancybox({height: "50%"});
-				}
-
-				init();
-
-			})();
-		</script>
 	</body>
 </html>
