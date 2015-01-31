@@ -9,31 +9,14 @@
 		<meta name="keywords" content="Graphic design, Seattle, Washington, web design, front-end development, art, graphics" />
 		<meta name="author" content="Allison Bennett" />
 		<link rel="shortcut icon" href="favicon.ico">
-				<link rel="stylesheet" type="text/css" href="css/component2.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/snap.svg-min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-				<script>
-
-						function calcHeight()
-				{
-				    var the_height=0;
-				    //find the height of the internal page
-				    if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
-				        the_height=document.getElementById('example').contentDocument.body.offsetHeight+40;
-				    }
-				    else
-				    {
-				        the_height=document.getElementById('example').contentWindow.document.body.scrollHeight+16;
-				    }
-				document.getElementById('example').height=the_height+"px";
-				}
-				</script>
-
 	</head>
 	<body>
 		<div class="container">
@@ -43,20 +26,41 @@
 				<span class="current-demo-gray">STRATEGIC DESIGNER.<br />MAKE IT PRETTY. MAKE IT SMART.</span>
 				<nav class="codrops-demos">
 					<a href="index.html">Work</a>
-					<a href="process.html">Process</a>
-					<a class="current-demo" href="everyday.html">Everyday</a>
+					<a class="current-demo" href="process.html">Process</a>
+					<a href="everyday.html">Everyday</a>
 					<a href="about.html">About</a>
-				</nav>
+									</nav>
 			</header>
-			<div class="current-demo-gray" style="text-align:center; font-weight:lighter;">
-					Things from everyday life. May be stuff I'm working on, cool stuff I see, or just whatever I'm up to. </div>
-				<div style="margin:0px;padding:0px;overflow:hidden">
-<iframe src="http://thealypaly.tumblr.com/" style="overflow:hidden;height:4250px;width:100%" height="4250px" width="100%" frameborder="0"></iframe> 
-</div>
-			<nav class="codrops-demos" style="margin: 0 auto; text-align:center; position: relative;">
-					<a href="index.html">&#8592; BACK TO WORK</a>
-				</nav>
-			
+			<section id="grid" class="grid home clearfix">
+				<a href="raisingneprocess.html" data-path-hover="m 180,60 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="img/process/raisingne-process-home.jpg" />
+					</figure>
+				</a>
+
+
+
+				<a href="neinvasivesprocess.html">					
+					<figure>
+						<img src="img/process/neinvasives-process-home.jpg" />
+					</figure>
+				</a>
+
+								<a href="englerprocess.html" data-path-hover="m 180,60 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="img/process/engler-process-home.jpg" />
+					</figure>
+				</a>
+
+				<a href="fpcprocess.html" data-path-hover="m 180,38 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="img/process/fpc-process-home.jpg" />
+					</figure>
+				</a>
+
+
+
+			</section>
 		</div><!-- /container -->
 		<script>
 			(function() {
